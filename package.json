@@ -1,0 +1,28 @@
+{
+  "name": "airecipieapp",
+  "version": "1.0.0",
+  "description": "RecipAI - AI-Powered Recipe Generator & Meal Planner",
+  "main": "index.js",
+  "scripts": {
+    "server": "cd server && nodemon index.js",
+    "client": "npm run dev --prefix Client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "install-all": "cd server && npm install && cd ../Client && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^4.22.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.2.1",
+    "nodemon": "^3.1.13"
+  }
+}
